@@ -1,11 +1,4 @@
-// упаковщик-распаковщик текста в изображение
-// AlexGyver, 2020, https://alexgyver.ru/
-// Добавил парсинг переноса строк
 
-/*
-  В Processing зайти "Набросок / Импортировать библиотеку... / Добавить библиотеку..."
- В поиске найти и установить библиотеку ControlP5
- */
 import controlP5.*;
 ControlP5 cp5;
 Textarea debugArea;
@@ -41,7 +34,7 @@ void setup() {
     .setColorBackground(color(180))
     .setColorForeground(color(180));
   ;
-  debugArea.setText("CryptoText v1.0 by AlexGyver");
+  debugArea.setText(" HELLO WORLD ");
 }
 
 void draw() {
@@ -52,7 +45,7 @@ int getSeed() {
   String thisKey = cp5.get(Textfield.class, "key").getText();
   int keySeed = 1;
   for (int i = 0; i < thisKey.length()-1; i++) 
-    keySeed *= int(thisKey.charAt(i) * (thisKey.charAt(i)-thisKey.charAt(i+1)));  // перемножением с разностью
+    keySeed *= int(thisKey.charAt(i) * (thisKey.charAt(i)-thisKey.charAt(i+1)));  // 
   return keySeed;
 }
 
